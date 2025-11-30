@@ -1,4 +1,4 @@
-function toogle menu(){
+function togglemenu(){
     const navLinks = document.getElementByid('navLinks');
 
     if(navLinks.style.display === "block"){
