@@ -76,3 +76,10 @@ body {
         display: block;
     }
 }
+
+/* styles for the about*/
+#about h1 {
+    color: red;
+    text-align: justify;
+
+}
