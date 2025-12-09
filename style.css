@@ -184,3 +184,19 @@ main {
     margin-left: 0;
   }
 }
+/* Sidebar is visible by default (desktop) */
+.sidebar {
+    display: block;
+}
+
+/* MOBILE: hide sidebar until toggled */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .sidebar.show {
+        display: block;
+    }
+}
+

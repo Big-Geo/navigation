@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (btn && sidebar) {
         btn.addEventListener("click", () => {
             sidebar.classList.toggle("open");
-            sidebar.classList.toggle("hidden");
+            sidebar.classList.toggle("show");
         });
     }
 });
