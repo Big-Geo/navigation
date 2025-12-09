@@ -80,7 +80,7 @@ header {
 ------------------------------ */
 .sidebar {
   position: fixed;
-  top: 80px; /* navbar height (70px) + 10px spacing */
+  top: 80px; /* navbar height */
   left: 0;
   width: 240px;
   bottom: 0;
@@ -88,9 +88,9 @@ header {
   padding: 20px;
   overflow-y: auto;
   transition: transform 0.3s ease;
+  transform: translateX(0); /* always visible on desktop */
 }
 
-/* Desktop: sidebar is always visible */
 .sidebar a {
   color: #e2e8f0;
   text-decoration: none;
@@ -104,22 +104,12 @@ header {
   color: #fbbf24;
 }
 
-/* Hidden by default (mobile mode) */
-.sidebar.hidden {
-  transform: translateX(-100%);
-}
-
-/* When opened by menu button */
-.sidebar.open {
-  transform: translateX(0);
-}
-
 /* ------------------------------
     MAIN CONTENT
 ------------------------------ */
 .container {
   display: flex;
-  margin-top: 80px; /* same as sidebar top */
+  margin-top: 80px;
 }
 
 main {
@@ -164,39 +154,25 @@ main {
     display: block;
   }
 
-  /* Hide desktop nav links */
+  /* Hide desktop navbar links */
   .nav-links {
     display: none;
   }
 
-  /* Sidebar becomes hidden by default */
+  /* MOBILE SIDEBAR (hidden by default) */
   .sidebar {
     transform: translateX(-100%);
     top: 70px;
   }
 
+  /* When JS adds .open → show sidebar */
   .sidebar.open {
     transform: translateX(0);
   }
 
-  /* Main content takes full width */
+  /* Main content full width */
   main {
     margin-left: 0;
   }
-}
-/* Sidebar is visible by default (desktop) */
-.sidebar {
-    display: block;
-}
-
-/* MOBILE: hide sidebar until toggled */
-@media (max-width: 768px) {
-    .sidebar {
-        display: none;
-    }
-
-    .sidebar.show {
-        display: block;
-    }
 }
 
